@@ -65,7 +65,7 @@ def over(b):
 
 
 def getKey(b):
-	"""Representing the board as a string for hashing"""
+	"""Representing the board as a string to store in a lookup table"""
 	k = ''
 	for i in b:
 		for j in i:
