@@ -17,13 +17,13 @@ def available():
 
 
 def playerUpdate():
-	"""Updating the board according to the player's move"""
+	"""Updating the board according to the player's input"""
 	while True:
 		try:
 			x = int(input('Your Move: '))
 			assert x in list(range(1,10))
 		except:
-			print('Please enter a number between 1 and 9\n')
+			print('Enter a number between 1 and 9\n')
 		else:
 			i = (x - 1) // 3
 			j = (x - 1) % 3
@@ -31,7 +31,7 @@ def playerUpdate():
 				board[i][j] = -1
 				break
 			else:
-				print('Illegal Move! Try Again\n')
+				print('Illegal move! Please try again\n')
 
 
 def over(b):
@@ -114,7 +114,8 @@ def aiUpdate():
 	
 	i, j = moves[max(moves.keys())]
 	board[i][j] = 1
-	print('CPU\'s Move:', (3*i) + j+1)
+	if __name__ == '__main__':
+		print('CPU\'s Move:', (3*i) + j+1)
 
 
 def main():
@@ -139,4 +140,6 @@ board = [[0 for i in range(3)] for j in range(3)]
 bDict = {-1:'O', 0: '_', 1:'X'}
 pDict = {-1:'Human wins! Good job', 0: 'It is a tie', 1:'AI wins! Better luck next time'}
 util = {}
-main()
+
+if __name__ == '__main__':
+	main()
