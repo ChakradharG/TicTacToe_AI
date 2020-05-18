@@ -25,7 +25,7 @@ def playerUpdate(stdscr, h, w):
 		try:
 			x = stdscr.getch()
 			if x == 27:
-				break
+				raise KeyboardInterrupt
 			elif x == curses.KEY_MOUSE:
 				_, j, i, _, _ = curses.getmouse()
 				i = abs((i - (h//2 - 2))//2)
@@ -35,6 +35,8 @@ def playerUpdate(stdscr, h, w):
 			else:
 				x  -= 48
 			assert x in list(range(1,10))
+		except KeyboardInterrupt:
+			exit()
 		except:
 			stdscr.addstr(h//2 - 11, w//2 - 15, 'Enter a number between 1 and 9')
 		else:
@@ -45,7 +47,6 @@ def playerUpdate(stdscr, h, w):
 				break
 			else:
 				stdscr.addstr(h//2 - 11, w//2 - 15, 'Illegal move! Please try again')
-	exit()
 
 
 def dispMenu(stdscr, k, h, w):
