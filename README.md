@@ -1,7 +1,14 @@
 # TicTacToe_AI
+A Tic-Tac-Toe playing bot that uses mini-max algorithm in order to choose the optimal move
 
-A Tic-Tac-Toe playing bot that uses mini-max algorithm in order to choose the most optimal move (provided the opponent is also choosing optimally)
+<br>
 
+## Getting Started
+* Clone this repository
+* Install the required modules (pip install -r ```Requirements.txt```) (This step is required only for Windows)
 
-If you want to play using the normal terminal then use TicTacToe_AI.py
-if you want to play using mouse clicks and curses terminal then use T3.py (requires python curses, [pip3 install windows-curses])
+<br>
+
+## How to Use
+* Run ```TicTacToe_AI.py``` if you want to play using your normal terminal (Text based game play)
+* Run ```T3.py``` if you want to play using the curses terminal (
