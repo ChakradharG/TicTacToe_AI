@@ -5,7 +5,8 @@ A Tic-Tac-Toe playing bot that uses mini-max algorithm in order to choose the op
 
 ## Getting Started
 * Clone this repository
-* Install the required modules (pip install -r ```Requirements.txt```) (This step is required only for Windows)
+* ```cd TicTacToe_AI```
+* Install the required modules (```pip install -r requirements.txt```) (This step is required only for Windows)
 
 <br>
 
